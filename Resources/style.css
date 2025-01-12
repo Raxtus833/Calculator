@@ -47,6 +47,7 @@
 
    .operator {
     background-color: bisque;
+    box-shadow: 3px 3px rgb(255, 204, 142);
    }
 
    #buttons {
