@@ -1,7 +1,6 @@
-.logo {
-    width: 50%;
+.logo {   
+    width: 25%;
     margin: 50px;
-    display: center;
    }
    img {
     width: 100%;
@@ -57,3 +56,5 @@
     /*.clear {
         background-color: orange;
     }*/
+
+   /*S this is a test*/
