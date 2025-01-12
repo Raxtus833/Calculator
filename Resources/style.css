@@ -43,3 +43,15 @@
    .number:active {
     box-shadow: 0px 0px;
    }
+
+   .operator {
+    background-color: blue;
+   }
+
+   #buttons {
+    display: flex;
+       }
+
+    .clear {
+        background-color: orange;
+    }
