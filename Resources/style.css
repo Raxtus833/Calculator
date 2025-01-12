@@ -14,11 +14,11 @@
     width: 280px;
     height: 350px;
     margin:auto;
-    background-color: white;
+    background-color: rgb(227, 199, 163);
     border: solid 5px #000;
    }
    #screen {
-    background-color: rgb(227, 199, 163);
+    background-color: white;
     height: 50px;
     width: 90%;
     margin: 10px auto;
@@ -45,13 +45,13 @@
    }
 
    .operator {
-    background-color: blue;
+    background-color: bisque;
    }
 
    #buttons {
     display: flex;
        }
 
-    .clear {
+    /*.clear {
         background-color: orange;
-    }
+    }*/
