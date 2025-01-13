@@ -32,7 +32,8 @@
     flex-wrap: wrap;
    }
    .number,
-   .operator {
+   .operator,
+   .clear {
     background-color: #F28500;
     width: 60px;
     height: 60px;
@@ -47,8 +48,15 @@
    .number:active {
     box-shadow: 0px 0px;
    }
+   .operator:active {
+    box-shadow: 0px 0px;
+   }
+   .clear:active {
+    box-shadow: 0px 0px;
+   }
 
-   .operator {
+    .operator,
+    .clear {
     background-color: bisque;
     box-shadow: 3px 3px rgb(255, 204, 142);
    }
@@ -56,6 +64,7 @@
    #buttons {
     display: flex;
        }
+    
 
     /*.clear {
         background-color: orange;
