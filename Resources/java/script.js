@@ -1,4 +1,5 @@
 
+
 document.getElementById("num1").onclick = function write1()
     {
         $("#screen").append(1);
@@ -39,25 +40,31 @@ document.getElementById("num0").onclick = function write0()
     {
         $("#screen").append(0);
     }
+    
 document.getElementById("plus").onclick = function writePlus()
     {
         $("#screen").append("+");
+        op = "+";
     }
 document.getElementById("minus").onclick = function writeMinus()
     {
         $("#screen").append("-");
+        op = "-";
     }
 document.getElementById("divide").onclick = function writeDivide()
     {
         $("#screen").append("/");
+        op = "/";
     }
 document.getElementById("multiply").onclick = function writeMultiply()
     {
-        $("#screen").append("x");;
+        $("#screen").append("x");
+        op = "x";
     }
 document.getElementById("equal").onclick = function writeEqual()
     {
         $("#screen").append("=");
+        op = "=";
     }
 document.getElementById("clear").onclick = function write()
     {
