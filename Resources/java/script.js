@@ -1,5 +1,5 @@
-var $number = $(".number");
 var $screen = $("#screen");
+var $number = $(".number");
 
 //when someone clicks on a number, it
 //saves the number to do the math

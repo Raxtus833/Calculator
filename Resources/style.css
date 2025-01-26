@@ -76,3 +76,9 @@
     }*/
 
    /*S this is a test*/
+
+   #operators {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   }
