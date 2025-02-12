@@ -119,6 +119,7 @@ document.getElementById("num0").onclick = function write0()
         if (op == "/") {
             answer = num1 / num2;
         }
+        $screen.append(answer);
     });
 
 
