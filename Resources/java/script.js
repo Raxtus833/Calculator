@@ -71,46 +71,46 @@ document.getElementById("num0").onclick = function write0()
         $screen.append(0);
     }
     */
-document.getElementById("plus").onclick = function writePlus()
+ $("#plus").on('click', function()
     {
         $screen.append("+");
         op = "+";
         if (currentNumber == 1) {
             currentNumber = 2;
         }
-    }
-document.getElementById("minus").onclick = function writeMinus()
+    });
+    $("#minus").on('click', function()
     {
         $screen.append("-");
         op = "-";
         if (currentNumber == 1) {
             currentNumber = 2;
         }
-    }
-document.getElementById("divide").onclick = function writeDivide()
+    });
+    $("#divide").on('click', function()
     {
         $screen.append("÷");
         op = "/";
         if (currentNumber == 1) {
             currentNumber = 2;
         }
-    }
-document.getElementById("multiply").onclick = function writeMultiply()
+    });
+    $("#multiply").on('click', function()
     {
         $screen.append("⋅");
         op = "x";
         if (currentNumber == 1) {
             currentNumber = 2;
         }
-    }
-document.getElementById("clear").onclick = function write()
+    });
+    $("#clear").on('click', function()
     {
         $screen.empty();
         num1 = null;
         num2 = null;
         currentNumber = 1;
-    };
-document.getElementById("equal").onclick = function writeEqual()
+    });
+    $("#equal").on('click', function()
     {
         $screen.append("=");
         num1 = parseInt(num1);
@@ -128,7 +128,7 @@ document.getElementById("equal").onclick = function writeEqual()
         if (op == "/") {
             answer = num1 / num2;
         }
-    };
+    });
 
 
 
