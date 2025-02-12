@@ -28,7 +28,6 @@ if (currentNumber == 2) {
    }
 });
 
-
 /*
 document.getElementById("num1").onclick = function write1()
     {
@@ -75,33 +74,25 @@ document.getElementById("num0").onclick = function write0()
     {
         $screen.append("+");
         op = "+";
-        if (currentNumber == 1) {
-            currentNumber = 2;
-        }
+        currentNumber++;
     });
     $("#minus").on('click', function()
     {
         $screen.append("-");
         op = "-";
-        if (currentNumber == 1) {
-            currentNumber = 2;
-        }
+        currentNumber++;
     });
     $("#divide").on('click', function()
     {
         $screen.append("÷");
         op = "/";
-        if (currentNumber == 1) {
-            currentNumber = 2;
-        }
+        currentNumber++;
     });
     $("#multiply").on('click', function()
     {
         $screen.append("⋅");
         op = "x";
-        if (currentNumber == 1) {
-            currentNumber = 2;
-        }
+        currentNumber++;
     });
     $("#clear").on('click', function()
     {
