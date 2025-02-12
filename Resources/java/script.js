@@ -71,12 +71,12 @@ document.getElementById("minus").onclick = function writeMinus()
     }
 document.getElementById("divide").onclick = function writeDivide()
     {
-        $screen.append("/");
+        $screen.append("÷");
         op = "/";
     }
 document.getElementById("multiply").onclick = function writeMultiply()
     {
-        $screen.append("x");
+        $screen.append("⋅");
         op = "x";
     }
 document.getElementById("equal").onclick = function writeEqual()
