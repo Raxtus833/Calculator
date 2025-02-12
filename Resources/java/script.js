@@ -11,7 +11,6 @@ var $number = $(".number");
 $number.on('click', function () {
     var numberPressed = $(this).html();
     $screen.append(numberPressed);
-});
 
 if (currentNumber == 1) {
     if (num1 == null) {
@@ -26,7 +25,8 @@ if (currentNumber == 2) {
     } else{
         num2 = num2 + numberPressed;
     }
-}
+   }
+});
 
 
 /*
