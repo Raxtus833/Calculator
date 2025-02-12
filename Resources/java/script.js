@@ -22,7 +22,7 @@ if (currentNumber == 1) {
 }
 if (currentNumber == 2) {
     if (num2 == null) {
-        num2=numberPressed;
+        num2 = numberPressed;
     } else{
         num2 = num2 + numberPressed;
     }
