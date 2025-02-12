@@ -15,7 +15,7 @@ $number.on('click', function () {
 
 if (currentNumber == 1) {
     if (num1 == null) {
-        num1=numberPressed;
+        num1 = numberPressed;
     } else{
         num1 = num1 + numberPressed;
     }
