@@ -91,25 +91,25 @@ document.getElementById("num0").onclick = function write0()
     {
         more();
         $screen.append("+");
-        op = +
+        op = "+";
     });
     $("#minus").on('click', function()
     {
         more();
         $screen.append("-");
-        op = -
+        op = "-";
     });
     $("#divide").on('click', function()
     {
         more();
         $screen.append("/");
-        op = /
+        op = "/";
     });
     $("#multiply").on('click', function()
     {
         more();
         $screen.append("*");
-        op = *
+        op = "*";
     });
     $("#clear").on('click', function()
     {
