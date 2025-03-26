@@ -1,6 +1,7 @@
 var currentNumber = 1;
 var num1;
 var num2;
+var click = 1;
 
 var $screen = $("#screen");
 var $number = $(".number");
@@ -9,6 +10,10 @@ var $number = $(".number");
 //saves the number to do the math
 
 $number.on('click', function () {
+    if (click > 8){
+        return;
+    }
+    click++;
     var numberPressed = $(this).html();
     $screen.append(numberPressed);
 
@@ -27,6 +32,18 @@ if (currentNumber == 2) {
     }
    }
 });
+
+function more(){
+    if (click >8){
+        click = click - 5;
+    }
+    if (currentNumber == 2) {
+        findAnswer();
+        $screen.empty();
+        $screen.append(num1);
+    }
+    currentNumber = 2;
+}
 
 /*
 document.getElementById("num1").onclick = function write1()
@@ -101,25 +118,37 @@ document.getElementById("num0").onclick = function write0()
         num2 = null;
         currentNumber = 1;
     });
-    $("#equal").on('click', function()
-    {
-        $screen.append("=");
+
+    function findAnswer() {
         num1 = parseInt(num1);
         num2 = parseInt(num2);
-        console.log(num1, op, num2);
-        if (op == "+") {
-            answer = num1 + num2;
-        }
-        if (op == "-") {
-            answer = num1 - num2;
-        }
-        if (op == "*") {
-            answer = num1 * num2;
-        }
-        if (op == "/") {
-            answer = num1 / num2;
-        }
-        $screen.append(answer);
+            if (op == "+") {
+                answer = num1 + num2;
+            }
+            if (op == "-") {
+                answer = num1 - num2;
+            }
+            if (op == "x") {
+                answer = num1 * num2;
+            }
+            if (op == "/") {
+                answer = num1 / num2;
+            }
+            num1 = answer;
+            num2 = null;
+            currentNumber = 1;
+    }
+    $("#equal").on('click', function()
+        {
+        $screen.append("=");
+            findAnswer();
+            if (click > 8) {
+                $screen.empty();
+                var answerLength = answer.toString();
+                click = answerLength.length;
+                console.log(click);
+            }
+            $screen.append(answer);
     });
 
 
