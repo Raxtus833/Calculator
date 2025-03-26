@@ -10,12 +10,13 @@ var $number = $(".number");
 //saves the number to do the math
 
 $number.on('click', function () {
-    if (click > 8){
+    click++;
+    if (click > 12){
         return;
     }
-    click++;
     var numberPressed = $(this).html();
     $screen.append(numberPressed);
+    $("#clear").css('background-color', '#c67d00');
 
 if (currentNumber == 1) {
     if (num1 == null) {
@@ -30,6 +31,7 @@ if (currentNumber == 2) {
     } else{
         num2 = num2 + numberPressed;
     }
+    $("#equal").css('background-color', '#c67d00');
    }
 });
 
@@ -89,28 +91,36 @@ document.getElementById("num0").onclick = function write0()
     */
  $("#plus").on('click', function()
     {
+        if(num1 != null) {
         more();
         $screen.append("+");
         op = "+";
-    });
+        };
+        return});
     $("#minus").on('click', function()
     {
+        if(num1 != null) {
         more();
         $screen.append("-");
         op = "-";
-    });
+        };
+        return});
     $("#divide").on('click', function()
     {
+        if(num1 != null) {
         more();
         $screen.append("/");
         op = "/";
-    });
+        };
+        return});
     $("#multiply").on('click', function()
     {
+        if(num1 != null) {
         more();
         $screen.append("*");
         op = "*";
-    });
+        };
+        return});
     $("#clear").on('click', function()
     {
         $screen.empty();
@@ -118,6 +128,8 @@ document.getElementById("num0").onclick = function write0()
         num2 = null;
         currentNumber = 1;
         click = 0;
+        $("#clear").css('background-color', '#f28500');
+        $("#equal").css('background-color', '#f28500');
     });
 
     function findAnswer() {
@@ -141,15 +153,22 @@ document.getElementById("num0").onclick = function write0()
     }
     $("#equal").on('click', function()
         {
+        var element = document.getElementById('equal');
+        var style = window.getComputedStyle(element);
+        var backgroundColor = "background-color";
+        var buttonColor = element.style.backgroundColor;
+        if(buttonColor == '#f28500') {
+            return;
+        }
         $screen.append("=");
             findAnswer();
             if (click > 8) {
                 $screen.empty();
                 var answerLength = answer.toString();
                 click = answerLength.length;
-                console.log(click);
             }
             $screen.append(answer);
+            $("#equal").css('background-color', '#f28500')
     });
 
 
