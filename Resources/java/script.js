@@ -89,27 +89,27 @@ document.getElementById("num0").onclick = function write0()
     */
  $("#plus").on('click', function()
     {
+        more();
         $screen.append("+");
-        op = "+";
-        currentNumber++;
+        op = +
     });
     $("#minus").on('click', function()
     {
+        more();
         $screen.append("-");
-        op = "-";
-        currentNumber++;
+        op = -
     });
     $("#divide").on('click', function()
     {
-        $screen.append("÷");
-        op = "/";
-        currentNumber++;
+        more();
+        $screen.append("/");
+        op = /
     });
     $("#multiply").on('click', function()
     {
-        $screen.append("⋅");
-        op = "x";
-        currentNumber++;
+        more();
+        $screen.append("*");
+        op = *
     });
     $("#clear").on('click', function()
     {
@@ -117,6 +117,7 @@ document.getElementById("num0").onclick = function write0()
         num1 = null;
         num2 = null;
         currentNumber = 1;
+        click = 0;
     });
 
     function findAnswer() {
